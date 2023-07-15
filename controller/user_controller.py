@@ -18,3 +18,7 @@ def user_update_controller(id):
 @app.route("/user/delete/<int:id>", methods=['DELETE'])
 def user_delete_controller(id):
     return obj.user_delete_model(id)
+
+@app.route("/user/patch/<int:id>", methods=['PATCH'])
+def user_patch_controller(id):
+    return obj.user_patch_model(request.form, id)
